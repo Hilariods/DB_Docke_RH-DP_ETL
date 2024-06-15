@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: igor_hilario
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: seu_banco_de_dados
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
